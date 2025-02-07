@@ -8,7 +8,7 @@ There are two files: `main.py` and `r503_sensor.py`.
 
 - `main.py`: This file displays a console-based menu to the user, allowing them to test the functionality of the sensor.
 
-- `r503_sensor.py`: Located within the `**jcLibs**` folder, this file contains the core functions necessary for interacting with the sensor. It is the primary file you should use to quickly implement a program that works with the R503 sensor.
+- `r503_sensor.py`: Located within the `jcLibs` folder, this file contains the core functions necessary for interacting with the sensor. It is the primary file you should use to quickly implement a program that works with the R503 sensor.
 
 ## Hardware needed
 
@@ -32,12 +32,12 @@ Use a micro USB cable to connect the Raspberry Pi Pico to a USB port on your PC.
 
 1. Open Visual Studio Code
 2. Open the folder in which you save the files
-3. Initialize your project, press the keys `Ctrl + Shift + P` and sear for `MicroPico: Initialize MicroPico project` in the command bar of VS code
+3. Initialize your project, press the keys `Ctrl + Shift + P` and search for `MicroPico: Initialize MicroPico project` in the command bar of VS code
 	![micropico initialization](https://github.com/jcKarurosu/PuertaDigital/blob/master/initialization.png?raw=true)
 4. If your Raspberry was already connected the message: `Connection to Micropython board established` will appear indicating a succesful connection.
 5. Righ click on `jcLibs` Folder from the explorer side bar and select `upload project to Pico`
 	![upload-project-to-pico](https://github.com/jcKarurosu/PuertaDigital/blob/master/upload_files.png?raw=true)
-6. Select file `main.py` and then run the program clicking on the Run menu at the bottom left of the screen
+6. Select `main.py` file and then run the program by clicking on the Run menu at the bottom left of the screen
 7. In the terminal you will see the program running and the menu for testing the functions of the sensor
 	![console](https://github.com/jcKarurosu/PuertaDigital/blob/master/console.png?raw=true)
 8. Have fun
