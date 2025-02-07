@@ -38,6 +38,7 @@ _cDeleteTemplate = const(0xC)
 _cEmptyFingerLib = const(0xD)
 _cSetSysParam = const(0xE)
 _cReadSysParam = const(0xF)
+_cReadProdInfo = const(0x3C)
 _cSetPassword = const(0x12)
 _cVerifyPassword = const(0x13)
 _cSetModuleAddress = const(0x15)
@@ -93,6 +94,7 @@ class jc_Fingerprint:
         self.baudrate = None
         self.templates = []
         self.template_count = None
+        self.model = ""
         i = 0
         while True:
             if self.check_sensor() != Command_OK:
@@ -119,6 +121,11 @@ class jc_Fingerprint:
         print(self.security_level)
         print("Device address -> ", end="")
         print(self.address)
+        if self.read_ProdInfo() == Command_OK:
+            print("Model -> ", end="")
+            print(self.model)
+        else:
+            print(" >>>>> NO SE LEYO EL CODIGO DEL MODELO :( <<<<<<<<<<<<<<<<< )")
         print(" ---------------------------- ")
         
     def get_sensor_ans(self, len_ans, n: int = 10):
@@ -204,6 +211,15 @@ class jc_Fingerprint:
             return Command_OK
         else:
             return AnError
+
+    def read_ProdInfo(self):
+        self.send_packet([_cReadProdInfo])
+        sensor_ans = self.get_sensor_ans(58)
+        if sensor_ans[0] != Command_OK:
+            return AnError
+        for c in sensor_ans[1:17]:
+            self.model = self.model + chr(c)
+        return sensor_ans[0]
 
     def read_SysParam(self):
         self.send_packet([_cReadSysParam])
