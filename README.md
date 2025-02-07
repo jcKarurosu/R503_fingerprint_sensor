@@ -24,7 +24,7 @@ There are two files: `main.py` and `r503_sensor.py`.
 
 Make the connections that are shown in the next table
 
-![Conections Screenshot](https://github.com/jcKarurosu/PuertaDigital/blob/master/Conexion-R503-RBPP.png?raw=true)
+![Conections Screenshot](https://github.com/jcKarurosu/PuertaDigital/blob/33086ff06544216921624508046400ebfd028fac/conecciones.png?raw=true)
 
 Use a micro USB cable to connect the Raspberry Pi Pico to a USB port on your PC.
 
