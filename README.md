@@ -2,6 +2,8 @@
 
 This is a basic program with code to start working and understand how works R503 fingerprint sensor.
 
+![project-pic](https://github.com/jcKarurosu/PuertaDigital/blob/master/sensor_project.jpg?raw=true)
+
 ## Software structure
 
 There are two files: `main.py` and `r503_sensor.py`.
