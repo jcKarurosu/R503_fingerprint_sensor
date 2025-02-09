@@ -1,4 +1,4 @@
-# R503 Fingerprint Sensor
+# R503 Fingerprint Sensor [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is a basic program with code to start working and understand how works R503 fingerprint sensor.
 
